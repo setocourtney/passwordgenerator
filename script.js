@@ -12,26 +12,10 @@ var possibleChars = "";
 var password = "";
 
 
-// button initiates prompt
-// prompt how many characters between 8 and 28
-// prompt what kind of characters (special, numeric, lowercase, uppercase)
-generateEl.addEventListener("click", function(e) {
-    e.preventDefault();
-    numChar = prompt("How many characters? Enter number between 8 and 28");
-    typeChar = prompt("What kind of characters? Special, numeric, lowercase, uppercase");
-    generatePassword(numChar,typeChar.toLowerCase());
-})
-
-// button copies password textarea content to clipboard
-copyEl.addEventListener("click", function(e) {
-    display.select();
-    document.execCommand("copy");
-})
-
 // create password using length and characters defined by user input
 // alerts user if user input for character type or number of characters is invalid
 function generatePassword(num, type) {
-    if (validateInput(num, type) && (num >= 8 && num <= 28)) {
+    if (validateInput(num, type) && (num >= 8 && num <= 128)) {
         var index;
         for (i = 0; i < num; i++) {
             //set index to random int between 0 and length of possible values - 1
@@ -69,3 +53,19 @@ function validateInput(num, type) {
     console.log(possibleChars);
     return isValid;
 }
+
+// button initiates prompt
+// prompt how many characters between 8 and 28
+// prompt what kind of characters (special, numeric, lowercase, uppercase)
+generateEl.addEventListener("click", function(e) {
+    e.preventDefault();
+    numChar = prompt("How many characters? Enter number between 8 and 128");
+    typeChar = prompt("What kind of characters? Special, numeric, lowercase, uppercase");
+    generatePassword(numChar,typeChar.toLowerCase());
+})
+
+// button copies password textarea content to clipboard
+copyEl.addEventListener("click", function(e) {
+    display.select();
+    document.execCommand("copy");
+})
