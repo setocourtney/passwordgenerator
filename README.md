@@ -1,5 +1,7 @@
 ## Password Generator
 
+https://setocourtney.github.io/passwordgenerator/
+
 This is an application that generates a random password based on user-selected criteria. 
 
 * The user will be prompted to choose from the following password criteria:
