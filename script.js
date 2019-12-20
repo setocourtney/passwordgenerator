@@ -62,6 +62,8 @@ generateEl.addEventListener("click", function(e) {
     numChar = prompt("How many characters? Enter number between 8 and 128");
     typeChar = prompt("What kind of characters? Special, numeric, lowercase, uppercase");
     generatePassword(numChar,typeChar.toLowerCase());
+    password = "";
+    possibleChars = "";
 })
 
 // button copies password textarea content to clipboard
