@@ -7,9 +7,7 @@
 
     <title>Password Generator</title>
     <!--application generates random password from user inputs--> 
-
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   </head>
   <body>
     <header>
@@ -19,6 +17,24 @@
         <div class="section-header">
           <h2>Generate a Password</h2>
         </div>  
+        <div class="inputs">
+          <label for="quantity">Password Length</label>
+          <input type="number" id="quantity" name="quantity" min="8" max="128">
+          <br/>
+          <br/>
+          <span class="tooltip">
+            <input type="checkbox" id="special" name="chartypes" value="special">
+            <label for="special">Special</label>
+            <span class="tooltiptext">(!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~)</span>
+          </span>
+          <input type="checkbox" id="lowercase" name="chartypes" value="lowercase">
+          <label for="lowercase">Lowercase</label>
+          <input type="checkbox" id="uppercase" name="chartypes" value="uppercase">
+          <label for="uppercase">Uppercase</label>
+          <input type="checkbox" id="number" name="chartypes" value="number">
+          <label for="number">Numbers</label>
+        </div>  
+        <br/>
         <div class="section">
           <textarea
             readonly
