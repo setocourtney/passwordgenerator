@@ -1,10 +1,9 @@
 # Password Generator
 
-https://setocourtney.github.io/passwordgenerator/
-
 This is an application that generates a random password based on user-selected criteria. 
 
 Deployed to GitHubPages: https://setocourtney.github.io/passwordgenerator/
+
 
 
 ## User Story
